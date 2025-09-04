@@ -10,10 +10,12 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.is;
 
 public class AeroStepDefinitions {
-    @Dado("que el usuario abre la pagina de Aerocivil")
+    @Dado("que el usuario abre la página de Aerocivil")
     public void abriPagina(){
         OnStage.setTheStage(new OnlineCast());
-        OnStage.theActorCalled("Usuario");
+        OnStage.theActorCalled("Usuario").attemptsTo(
+                OpenAeroPage.at("https://www.aerocivil.gov.co/")
+        );
     }
 
     @Cuando("navega al menú de Transparencia")

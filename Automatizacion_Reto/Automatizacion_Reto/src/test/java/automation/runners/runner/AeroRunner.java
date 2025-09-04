@@ -5,8 +5,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/aero.feature",
-        glue = "com.banistmo.automation.stepdefinitions",
+        features = "resources/features/aero.feature",
+        glue = "automation.runners.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 
