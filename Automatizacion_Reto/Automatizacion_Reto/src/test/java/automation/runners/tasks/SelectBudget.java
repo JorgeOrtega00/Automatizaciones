@@ -2,20 +2,21 @@ package automation.runners.tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
 import automation.runners.userinterfaces.aeroPage;
+import net.serenitybdd.screenplay.actions.Click;
+
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class NavigateToTransparency implements Task{
+public class SelectBudget implements Task {
 
-    public static NavigateToTransparency menu() {
-        return instrumented(NavigateToTransparency.class);
+    public static SelectBudget option(){
+        return instrumented(SelectBudget.class);
     }
-
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(aeroPage.TRANSPARENCIA_MENU)
+                Click.on(aeroPage.PRESUPUESTO_OPTION)
         );
+
     }
 }
